@@ -1,0 +1,169 @@
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #f6faff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+.container{
+    width: 90%;
+    max-width: 400px;
+    background-color: #ffff;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.input-group{
+    margin-bottom: 2rem;
+}
+
+.input-group{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input{
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 50px;
+    background-color: #f6faff;
+    font-size: 1rem;
+    color: #333;
+}
+ 
+
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0077ff;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0055cc;
+}
+
+p#result {
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+/* Barra base con colores estilo BMI */
+.bmi-bar {
+    width: 100%;
+    height: 25px;
+    border-radius: 50px;
+    margin-top: 20px;
+    background: linear-gradient(to right,
+        #74b9ff 0%,   /* Underweight - Celeste */
+        #74b9ff 18.5%,
+        #55efc4 18.5%,/* Normal - Verde */
+        #55efc4 24.9%,
+        #ffeaa7 24.9%,/* Sobrepeso - Amarillo */
+        #ffeaa7 29.9%,
+        #fab1a0 29.9%,/* Obesidad - Naranja */
+        #fab1a0 34.9%,
+        #ff7675 34.9%,/* Obesidad extrema - Rojo */
+        #ff7675 40%
+    );
+    position: relative;
+}
+
+/* Indicador BMI */
+/* Barra moderna estilo Apple Health */
+.bmi-bar {
+    width: 100%;
+    height: 28px;
+    border-radius: 20px;
+    margin-top: 25px;
+    position: relative;
+
+    background: linear-gradient(to right,
+        #74b9ff 0%,       /* Bajo peso */
+        #74b9ff 46.25%,
+
+        #55efc4 46.25%,   /* Normal */
+        #55efc4 62.25%,
+
+        #ffeaa7 62.25%,   /* Sobrepeso */
+        #ffeaa7 74.75%,
+
+        #fab1a0 74.75%,   /* Obesidad */
+        #fab1a0 87.25%,
+
+        #ff7675 87.25%,   /* Extrema */
+        #ff7675 100%
+    );
+
+    /* Sombra suave */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    /* Brillo */
+    overflow: hidden;
+}
+
+.bmi-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+    /* Brillo interno tipo "glass" */
+    background: linear-gradient(
+        rgba(255,255,255,0.3),
+        rgba(255,255,255,0.1)
+    );
+}
+
+/* Indicador moderno */
+#bmiIndicator {
+    position: absolute;
+    top: -4px;
+    width: 10px;
+    height: 36px;
+    background: #2d3436;
+    border-radius: 5px;
+
+    /* Sombra flotante */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+
+    transition: left 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Texto de categorías y peso ideal más bonito */
+#category, #idealWeight {
+    margin-top: 12px;
+    font-size: 1rem;
+    text-align: center;
+    color: #444;
+}
+
+#idealWeight b {
+    color: #0077ff;
+}

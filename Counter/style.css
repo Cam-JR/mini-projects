@@ -1,0 +1,123 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #1e1e2f, #111118);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card{
+    background: linear-gradient(to bottom, #272738, #1d1d29);
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    padding: 30px;
+    text-align: center;
+    width: 300px; 
+}
+
+
+
+.heading, .counter-machine{
+    color: #fff;
+    margin: 0;
+}
+
+.counter{
+    background-color: #333;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border: 2px solid transparent;
+    transition: border-color 0.5s;
+}
+
+.btn-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn-counter{
+    background-color: #3c6df0; 
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.btn-counter:hover{
+    background-color: #2f54c9; 
+}
+
+
+.positive{
+    border-color: green;
+}
+
+.negative{
+    border-color: red;
+}
+
+
+
+.counter-machine {
+    transition: transform 0.1s ease;
+}
+
+.counter-machine.bump {
+    transform: scale(1.2);
+}
+
+
+/* BOTÓN */
+.theme-btn{
+    position: fixed;
+    right: 18px;
+    top: 18px;
+    padding: 14px 14px;
+    border-radius: 90%;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    font-size: 22px;
+}
+
+/* DARK MODE */
+body.dark{
+    background: linear-gradient(135deg, #0d0d12, #0a0a0d);
+    color: #f1f1f1;
+}
+
+body.dark .container{
+    background: transparent;
+    box-shadow: none;
+}
+
+body.dark .card{
+    background: linear-gradient(to bottom, #1b1b28, #14141e);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Changer Application</title>
+  <link rel="stylesheet" href="style.css" /> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+</head>
+<body>
+
+  <button id="toggle-theme" class="theme-btn">
+    <span class="material-symbols-outlined">bedtime</span>
+  </button>
+
+
+  <div class="container">
+    <h1>Cambia el CSS   con la ayuda de los Sliders</h1> 
+
+    <div class="css-controller">
+      <div class="control">
+        <label for="base">Base Color</label>
+        <input type="color" name="base" id="base" value="#ff0000">
+      </div>
+
+      <div class="control">
+        <label for="width">Width</label>
+        <input type="range" id="width" name="width" min="0" max="100" value="50" data-sizing="%">
+      </div>
+
+      <div class="control">
+        <label for="border-radius">Border-Radius</label>
+        <input type="range" id="border-radius" name="border-radius" min="0" max="100" value="15" data-sizing="px">
+      </div>
+
+      <div class="control">
+        <label for="padding">Padding</label>
+        <input type="range" id="padding" name="padding" min="0" max="200" value="20" data-sizing="px">
+      </div>
+
+      <div class="control">
+        <label for="blur">Blur</label>
+        <input type="range" id="blur" name="blur" min="0" max="25" value="0" data-sizing="px">
+      </div>
+
+      <div class="control">
+        <label>&nbsp;</label>
+        <div style="height:34px;"></div>
+      </div>
+    </div>
+
+    <div class="upload-row">
+      <label for="img-upload">Subir Imagen</label>
+      <input type="file" id="img-upload" accept="image/*">
+    </div>
+
+    <img id="main-image" src="https://i.pinimg.com/736x/91/c3/d1/91c3d172ed4c05bc739a0cb95a549ab3.jpg" alt="Image from Pixabay">
+
+    </br>   
+    </br>
+    
+    <h2>CSS generado:</h2>
+    <pre id="css-output"></pre>
+  </div>
+
+  <script src="scrip.js"></script>
+</body>
+</html>
