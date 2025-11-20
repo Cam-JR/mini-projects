@@ -17,4 +17,4 @@ Este es un **cronómetro simple e interactivo** desarrollado con **HTML, CSS y J
 
 ## 🖥️ Demo:
 
-https://stopwatchdarkk.netlify.app
+https://stoppwatchhh.netlify.app/

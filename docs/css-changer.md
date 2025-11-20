@@ -22,5 +22,5 @@ Con este proyecto podrás ajustar **color base, ancho, padding, border-radius y 
 
 ## 🌐 Demo:
 
-https://css-generador.netlify.app
+https://css-generador.netlify.app/
 
