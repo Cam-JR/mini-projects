@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Todo List — Trello Style</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Todo List <span class="sub">— Trello Style</span></h1>
+
+      <div class="controls">
+        <input id="search" type="search" placeholder="Buscar tareas..." aria-label="Buscar tareas" />
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">Todas</button>
+          <button class="filter-btn" data-filter="pending">Pendientes</button>
+          <button class="filter-btn" data-filter="completed">Completadas</button>
+          <button class="filter-btn" data-filter="urgent">Urgentes</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="container">
+      <form id="task-form" class="task-form" autocomplete="off">
+        <input id="task-input" maxlength="120" type="text" placeholder="Escriba su tarea..." required />
+        <select id="category-select" aria-label="Categoría">
+          <option value="work" data-color="#4f46e5">Trabajo</option>
+          <option value="personal" data-color="#10b981">Personal</option>
+          <option value="reminder" data-color="#f59e0b">Recordatorio</option>
+          <option value="urgent" data-color="#ef4444">Urgente</option>
+        </select>
+        <input id="due-date" type="date" aria-label="Fecha de vencimiento" />
+        <button id="add-btn" type="submit" title="Añadir tarea"><i class="fa-solid fa-plus"></i></button>
+      </form>
+
+      <div class="board">
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast notifications -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
